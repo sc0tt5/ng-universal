@@ -1,6 +1,8 @@
 {
   "name": "ng-universal",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "author": "Scott Robertson (https://github.com/sc0tt5)",
+  "license": "GNU GPL v3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open --watch",
@@ -13,7 +15,7 @@
     "build:client-and-server-bundles": "ng build --prod && ng run ng-universal:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
   },
-  "private": false,
+  "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.0-rc.2",
     "@angular/common": "~9.0.0-rc.2",
