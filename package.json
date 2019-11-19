@@ -15,7 +15,7 @@
     "build:client-and-server-bundles": "ng build --prod && ng run ng-universal:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~9.0.0-rc.2",
     "@angular/common": "~9.0.0-rc.2",
