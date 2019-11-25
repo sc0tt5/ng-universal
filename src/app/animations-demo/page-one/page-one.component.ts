@@ -1,3 +1,4 @@
+// prettier-ignore
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Data } from '@angular/router';
 import { Page } from '@core/models/page';

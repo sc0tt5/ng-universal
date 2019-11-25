@@ -12,7 +12,7 @@ import { LoaderInterceptor } from './shared/services/loader.interceptor';
 
 @NgModule({
   imports: [
-    BrowserModule.withServerTransition({ appId: 'tour-of-heroes' }),
+    BrowserModule.withServerTransition({ appId: 'ng-universal' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
