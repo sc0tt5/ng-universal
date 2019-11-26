@@ -1,7 +1,6 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PageResolver } from '@shared/guards/page.guard';
+import { PageResolver } from '@core/services/page-resolver.service';
 import { AnimationDemoComponent } from './animation-demo.component';
 
 const routes: Routes = [
@@ -27,7 +26,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [AnimationDemoComponent],
-  imports: [CommonModule, RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [AnimationDemoComponent]
 })
 export class AnimationDemoModule {}

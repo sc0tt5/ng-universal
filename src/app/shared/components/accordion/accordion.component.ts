@@ -1,8 +1,6 @@
+// ref: https://stackblitz.com/edit/github-madr3a?file=src%2Fapp%2Faccordion%2Faccordion-item2%2Faccordion-item2.component.ts
 import { AfterContentInit, Component, ContentChildren } from '@angular/core';
 import { AccordionItem, AccordionWrapper, ACCORDION_ITEM } from './accordion.model';
-
-// injection token
-// export const ACCORDION_ITEM = new InjectionToken<AccordionItem>('AccordionItem');
 
 @Component({
   selector: 'app-accordion',
