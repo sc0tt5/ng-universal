@@ -3,6 +3,6 @@
   <p [innerHTML]="page.content"></p>
 
   <app-accordion>
-    <app-accordion-one *ngFor="let item of page.accordionItems"> </app-accordion-one>
+    <app-accordion-one *ngFor="let item of page.accordionItems" [item]="item"></app-accordion-one>
   </app-accordion>
 </div>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, forwardRef } from '@angular/core';
+import { Component, EventEmitter, forwardRef, Input } from '@angular/core';
 import { AccordionItem, ACCORDION_ITEM } from '../accordion.model';
 
 @Component({
@@ -8,6 +8,7 @@ import { AccordionItem, ACCORDION_ITEM } from '../accordion.model';
   providers: [{ provide: ACCORDION_ITEM, useExisting: forwardRef(() => AccordionOneComponent) }]
 })
 export class AccordionOneComponent implements AccordionItem {
+  @Input() item: AccordionItem;
   public isOpen: boolean;
   public itemToggled = new EventEmitter<number>();
 }

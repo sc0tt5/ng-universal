@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -7,7 +6,6 @@ import { LoaderInterceptor } from './services/loader.interceptor';
 
 @NgModule({
   imports: [
-    CommonModule,
     HttpClientModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

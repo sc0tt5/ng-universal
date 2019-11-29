@@ -1,25 +1,28 @@
-$header-height: 20px;
-$content-height: 50px;
+$main: #39a1e7;
+$secondary: #3292d3;
 
+// scoped to this item only
 .accordion-item {
-  height: $header-height;
-  padding: 10px 15px;
-  overflow: hidden;
-  background: #eeeeee;
-  border-bottom: solid #484848;
-  transition: all 0.3s;
-  &:hover {
-    background-color: #ccc;
-  }
-  &.open {
-    height: $header-height + $content-height;
-    overflow: auto;
-  }
-  .item-header {
-    height: $content-height;
-    cursor: pointer;
-  }
-  .item-content {
-    display: block;
+  // header label
+  &-label {
+    border-color: $secondary;
+    background: $main;
+
+    // header icon
+    &::after {
+      content: '\276F';
+    }
+
+    // header icon
+    &:hover {
+      background: darken($main, 10%);
+    }
+
+    &.open {
+      background: darken($main, 10%);
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
   }
 }
