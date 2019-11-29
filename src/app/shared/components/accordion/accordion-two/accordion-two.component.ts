@@ -8,7 +8,7 @@ import { AccordionItem, ACCORDION_ITEM } from '../accordion.model';
   providers: [{ provide: ACCORDION_ITEM, useExisting: forwardRef(() => AccordionTwoComponent) }]
 })
 export class AccordionTwoComponent implements AccordionItem {
-  @Input() item: AccordionItem;
+  @Input() item: any;
   public isOpen: boolean;
   public itemToggled = new EventEmitter<number>();
 }
