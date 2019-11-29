@@ -20,5 +20,10 @@
       "@shared/*": ["src/app/shared/*"],
       "@assets/*": ["src/assets/*"]
     }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "ivyTemplateTypeCheck": false
   }
 }
