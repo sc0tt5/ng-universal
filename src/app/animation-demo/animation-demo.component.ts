@@ -4,8 +4,8 @@ import { Router, RouterOutlet } from '@angular/router';
 // prettier-ignore
 import { routerTransitionLoadingEnd, routerTransitionLoadingStart, routerTransitionPageLoad } from '@core/animations/router-animations';
 import { Page } from '@core/models/page';
+import { LoaderService } from '@core/services/loader.service';
 import { Subject } from 'rxjs';
-import { LoaderService } from '../shared/services/loader.service';
 
 @Component({
   selector: 'animation-demo',

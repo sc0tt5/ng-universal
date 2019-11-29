@@ -1,28 +1,28 @@
 import { isPlatformBrowser } from '@angular/common';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { APP_ID, Inject, NgModule, PLATFORM_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { AnimationDemoModule } from './animations-demo/animation-demo.module';
+import { CoreModule } from '@core/core.module';
+import { SharedModule } from '@shared/shared.module';
+import { AnimationDemoModule } from './animation-demo/animation-demo.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InMemoryDataService } from './shared/services/in-memory-data.service';
-import { LoaderInterceptor } from './shared/services/loader.interceptor';
 
 @NgModule({
   imports: [
-    BrowserModule.withServerTransition({ appId: 'tour-of-heroes' }),
+    // angular
+    BrowserModule.withServerTransition({ appId: 'ng-universal' }),
     BrowserAnimationsModule,
-    AppRoutingModule,
-    HttpClientModule,
+    // core & shared
+    CoreModule,
+    SharedModule,
+    // features
     AnimationDemoModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
-      dataEncapsulation: false
-    })
+    // app
+    AppRoutingModule
   ],
   declarations: [AppComponent],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }], // interceptor for loading indicator
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, Router } from '@angular/router';
 import { Page } from '@core/models/page';
-import { PageService } from '@shared/services/page.service';
+import { PageService } from '@core/services/page.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
