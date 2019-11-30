@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AccordionTwoComponent } from './accordion-two.component';
 
 describe('AccordionTwoComponent', () => {
@@ -15,10 +14,11 @@ describe('AccordionTwoComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AccordionTwoComponent);
     component = fixture.componentInstance;
+    component.item = { header: 'header 4', content: 'content 4' };
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create the component', () => {
     expect(component).toBeTruthy();
   });
 });

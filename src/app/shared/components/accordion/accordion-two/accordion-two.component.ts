@@ -9,6 +9,6 @@ import { AccordionItem, ACCORDION_ITEM } from '../accordion.model';
 })
 export class AccordionTwoComponent implements AccordionItem {
   @Input() item: any;
-  public isOpen: boolean;
-  public itemToggled = new EventEmitter<number>();
+  isOpen: boolean;
+  itemToggled = new EventEmitter<number>();
 }

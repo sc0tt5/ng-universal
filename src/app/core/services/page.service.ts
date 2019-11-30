@@ -15,6 +15,7 @@ export class PageService {
     this.api = `${origin}${this.api}`;
   }
 
+  // TODO: unit test getPage
   getPage(param: string): Observable<Page> {
     return this.http.get<Page[]>(this.api).pipe(
       map(pages => pages.find(page => page.param === param)),
