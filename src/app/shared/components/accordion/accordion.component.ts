@@ -12,13 +12,14 @@ export class AccordionComponent implements AfterContentInit, AccordionWrapper {
   private activeIndex: number;
   @ContentChildren(ACCORDION_ITEM as any) items: AccordionItem[];
 
-  public ngAfterContentInit(): void {
+  ngAfterContentInit(): void {
     this.items.forEach((item: AccordionItem, index) => {
       item.itemToggled.subscribe(() => this.itemToggledHandler(index));
     });
   }
 
-  public itemToggledHandler(i: number) {
+  // TODO: unit test itemToggledHandler
+  itemToggledHandler(i: number) {
     this.activeIndex = this.activeIndex === i ? null : i;
     this.items.forEach((item: AccordionItem, index) => {
       item.isOpen = index === this.activeIndex;

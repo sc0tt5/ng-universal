@@ -11,6 +11,7 @@ import { map } from 'rxjs/operators';
 export class PageResolver implements Resolve<any> {
   constructor(private pageService: PageService, private router: Router) {}
 
+  // TODO: unit test resolve
   resolve(route: ActivatedRouteSnapshot): Observable<Page> {
     const param = route.data.state;
 
