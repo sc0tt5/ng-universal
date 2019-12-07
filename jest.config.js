@@ -1,4 +1,6 @@
 module.exports = {
+  name: 'ng-universal',
+  preset: 'jest-preset-angular',
   globals: {
     'ts-jest': {
       tsConfig: './tsconfig.spec.json',
@@ -17,16 +19,32 @@ module.exports = {
     '@shared/(.*)': '<rootDir>/src/app/shared/$1'
   },
   transformIgnorePatterns: ['node_modules/(?!@ngrx)'],
+  collectCoverage: true,
   collectCoverageFrom: [
     'src/app/**/*.ts',
     '!src/app/**/*.module.ts',
     '!src/app/**/*.array.ts',
     '!src/app/fragmentTypes.ts'
   ],
+  coverageDirectory: './tmp/coverage',
+  coverageReporters: ['html'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   testPathIgnorePatterns: ['/node_modules/', '/dist/', 'src/app/*.{js}'],
   snapshotSerializers: [
     'jest-preset-angular/AngularSnapshotSerializer.js',
     'jest-preset-angular/HTMLCommentSerializer.js'
+  ],
+  reporters: [
+    'default',
+    [
+      'jest-html-reporters',
+      {
+        publicPath: './tmp/results',
+        filename: 'index.html',
+        expand: false,
+        hideIcon: true,
+        pageTitle: 'Results'
+      }
+    ]
   ]
 };
