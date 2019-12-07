@@ -6,7 +6,7 @@
     "module": "commonjs",
     "types": []
   },
-  "exclude": ["test.ts", "**/*.spec.ts"],
+  "exclude": ["**/*.spec.ts"],
   "angularCompilerOptions": {
     "entryModule": "src/app/app.server.module#AppServerModule",
     "enableIvy": false
