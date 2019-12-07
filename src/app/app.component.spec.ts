@@ -1,3 +1,4 @@
+import { APP_BASE_HREF } from '@angular/common';
 import { async, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CoreModule } from '@core/core.module';
@@ -9,7 +10,8 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, CoreModule, SharedModule, AnimationDemoModule],
-      declarations: [AppComponent]
+      declarations: [AppComponent],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
     }).compileComponents();
   }));
 
